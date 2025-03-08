@@ -12,6 +12,3 @@ A simple profile card built using HTML, CSS, and JavaScript.
 1. Replace `cover01.png` and `sooraj.png` with your images.
 2. Update the details inside `Profile.js` to personalize your profile.
 3. Open `Profile.html` in a browser to see the profile card.
-
-## Demo
-View the live demo: [GitHub Pages Link (if hosted)]
