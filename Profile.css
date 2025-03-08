@@ -1,0 +1,172 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #727176;
+}
+
+/* Profile Card */
+.profile-card {
+  top: 20px;
+    width: 320px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0px #0D62A5;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+/* Cover Image */
+.cover-wrapper {
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.cover-img {
+    width: 100%;
+    height: 150%;
+    object-fit: cover;
+}
+
+/* Avatar */
+.avatar-wrapper {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid white;
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    overflow: hidden;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Profile Details */
+.profile-details {
+    margin-top: 60px;
+    padding: 15px;
+}
+
+.user-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000A16;
+}
+
+.user-title {
+  margin: 10px;
+    font-size: 14px;
+    color: #C62E3B;
+}
+
+.user-about {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Separator */
+.separator {
+    width: 60%;
+    height: 0;
+    border-left: 30px solid transparent; 
+    border-right: 30px solid transparent;
+    border-top: 2px solid #ddd; 
+    margin: 10px auto;
+}
+
+/* Social Icons */
+.social-handles {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.icon {
+    font-size: 20px;
+    transition: 0.3s;
+}
+.bi-instagram {
+    color: #E1306C;
+}
+.bi-twitter {
+    color: #1DA1F2;
+}
+.bi-facebook {
+    color: #1877F2;
+}
+.bi-whatsapp {
+    color: #25D366;
+}
+
+/* Optional: Add hover effect */
+.icon:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+    color: #007bff;
+}
+/* Skeleton Loading Effect */
+.loading .cover-img,
+.loading .avatar-img {
+    display: none;
+}
+
+/* Skeleton Loading Effect */
+.skeleton {
+    display: inline-block;
+  top: 20px;
+    width: 320px;
+    background: linear-gradient(to right, #e0e0e0 0%, #f8f8f8 50%, #e0e0e0 100%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite linear;
+    border-radius: 4px;
+}
+
+@keyframes loading {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* Remove skeleton after loading */
+.profile-card:not(.loading) .skeleton {
+    display: none;
+}
+
+@keyframes loading {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+/* this will Hide images and social icons when skeleton loading */
+.profile-card.loading .cover-img,
+.profile-card.loading .avatar-img,
+.profile-card.loading .social-handles a {
+    display: none !important;
+}
+
+/*This will Show images and social icons when loading is done */
+.profile-card:not(.loading) .cover-img,
+.profile-card:not(.loading) .avatar-img,
+.profile-card:not(.loading) .social-handles a {
+    display: block !important;
+}
